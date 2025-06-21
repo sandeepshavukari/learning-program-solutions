@@ -15,6 +15,6 @@ public class FactoryTest {
             System.out.println("Invalid notification type entered.");
         }
 
-        scanner.close();
+        
     }
 }
