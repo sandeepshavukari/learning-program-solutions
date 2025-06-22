@@ -7,7 +7,7 @@ public class FinantialForecasting {
         Scanner sc = new Scanner(System.in);
         SIPWealthForecaster frcst = new SIPWealthForecaster();
 
-        System.out.println("=== SIP Wealth Growth Forecaster ===");
+        System.out.println("=== SIP Wealth Growth Forecaster (Recursive) ===");
 
         System.out.print("Enter Monthly Investment Amount (₹): ");
         double mInv = sc.nextDouble();
@@ -25,6 +25,5 @@ public class FinantialForecasting {
         System.out.printf("\nFuture Value of Investment: ₹%.2f", futval);
         System.out.printf("\nTotal Invested Amount: ₹%.2f", ttlInv);
         System.out.printf("\nWealth Gained (Profit): ₹%.2f\n", wltGain);
-
     }
 }
