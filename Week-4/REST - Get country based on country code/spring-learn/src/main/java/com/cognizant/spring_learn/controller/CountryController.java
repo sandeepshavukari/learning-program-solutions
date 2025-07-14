@@ -1,14 +1,23 @@
 package com.cognizant.spring_learn.controller;
 
 import com.cognizant.spring_learn.model.Country;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.cognizant.spring_learn.service.CountryService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/countries")
 public class CountryController {
 
-    @GetMapping("/countries/in")
-    public Country getCountryIndia() {
-        return new Country("IN", "India");
+    @Autowired
+    private CountryService countryService;
+
+    @GetMapping("/{code}")
+    public Country getCountryByCode(@PathVariable String code) {
+        Country country = countryService.getCountry(code);
+        if (country == null) {
+            throw new RuntimeException("Country not found with code: " + code);
+        }
+        return country;
     }
 }
