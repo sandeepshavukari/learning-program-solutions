@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://www.springframework.org/schema/beans 
-        http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="IN" class="com.cognizant.spring_learn.model.Country">
         <property name="code" value="IN" />
@@ -25,7 +25,28 @@
                     <property name="code" value="DE" />
                     <property name="name" value="Germany" />
                 </bean>
+                <bean class="com.cognizant.spring_learn.model.Country">
+                    <property name="code" value="UK" />
+                    <property name="name" value="United Kingdom" />
+                </bean>
+                <bean class="com.cognizant.spring_learn.model.Country">
+                    <property name="code" value="CA" />
+                    <property name="name" value="Canada" />
+                </bean>
+                <bean class="com.cognizant.spring_learn.model.Country">
+                    <property name="code" value="AU" />
+                    <property name="name" value="Australia" />
+                </bean>
+                <bean class="com.cognizant.spring_learn.model.Country">
+                    <property name="code" value="FR" />
+                    <property name="name" value="France" />
+                </bean>
+                <bean class="com.cognizant.spring_learn.model.Country">
+                    <property name="code" value="BR" />
+                    <property name="name" value="Brazil" />
+                </bean>
             </list>
         </constructor-arg>
     </bean>
+
 </beans>

@@ -21,7 +21,7 @@ public class CountryController {
         return context.getBean("IN", Country.class);
     }
 
-    @GetMapping("/countries")
+    @GetMapping("/allcountries")
     public List<Country> getAllCountries() {
         return context.getBean("countryList", List.class);
     }
