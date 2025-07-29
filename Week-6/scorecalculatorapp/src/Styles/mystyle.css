@@ -1,0 +1,69 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.score-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  width: 100%;
+  max-width: 400px;
+  text-align: left;
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.student-name {
+  color: #2c3e50;
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 10px;
+}
+
+.student-detail {
+  color: #34495e;
+  font-size: 1.1em;
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+.goal-status {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px dashed #bdc3c7;
+  color: #27ae60;
+}
+
+@media (max-width: 600px) {
+  .score-card {
+    padding: 20px;
+  }
+  .student-name {
+    font-size: 1.5em;
+  }
+  .student-detail, .goal-status {
+    font-size: 1em;
+  }
+}
